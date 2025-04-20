@@ -228,6 +228,10 @@ namespace b {
                 return m_data.data();
             }
 
+            [[nodiscard]] std::string_view view() const {
+              return m_data;
+            }
+
             [[nodiscard]] std::vector<uint8_t> vec() const {
                 return { m_data.begin(), m_data.end() };
             }
